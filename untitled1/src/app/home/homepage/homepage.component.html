@@ -1,0 +1,59 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://play-lh.googleusercontent.com/xP5oaC4t8NeTrBYLwf5u6MXn512iIA3KGLifipbPm_T6OwwGExZALEjbIUaHWkoJUQ" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      VTV ON
+    </a>
+  </div>
+</nav>
+<div class="container">
+  <div class="alert alert-info">
+    <h2>Top Movie</h2>
+  </div>
+  <div class="row">
+    <div *ngFor="let movie of movies"  class="col-lg-4 col-md-6 col-sm-12">
+      <div class="card" style="width: 18rem; margin-bottom: 2rem">
+        <div class="card-body">
+          <h5 class="card-title">{{movie.title}}</h5>
+          <p class="card-text">{{movie.description}}</p>
+          <p class="card-text">{{movie.expiredTime}}</p>
+          <a [routerLink]="['/detail/movie',movie.id]" class="btn btn-primary">Go details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="alert alert-info">
+    <h2>Top Program</h2>
+  </div>
+  <div class="row">
+    <div *ngFor="let program of programs"  class="col-lg-4 col-md-6 col-sm-12">
+      <div class="card" style="width: 18rem; margin-bottom: 2rem">
+        <div class="card-body">
+          <h5 class="card-title">{{program.title}}</h5>
+          <p class="card-text">{{program.description}}</p>
+          <a [routerLink]="['/detail/program',program.id]" class="btn btn-primary">Go details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="alert alert-info">
+    <h2>Top Sport</h2>
+  </div>
+  <div class="row">
+    <div *ngFor="let sport of sports"  class="col-lg-4 col-md-6 col-sm-12">
+      <div class="card" style="width: 18rem; margin-bottom: 2rem">
+        <div class="card-body">
+          <h5 class="card-title">{{sport.title}}</h5>
+          <p class="card-text">{{sport.description}}</p>
+          <a [routerLink]="['/detail/sport',sport.id]" class="btn btn-primary">Go details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

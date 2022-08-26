@@ -1,0 +1,18 @@
+<div>
+  <h1>PROGRAM</h1>
+</div>
+<div class="container" *ngIf="program">
+  <div class="card" style="width: 60rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{program.title}}</h5>
+      <p class="card-text">{{program.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ChannelID: {{program.channelId}}</li>
+      <li class="list-group-item">Link play: <a class="card-link">{{program.linkPlay.url}}</a></li>
+    </ul>
+    <div class="card-body">
+      <a routerLink="/home" class="card-link">Back</a>
+    </div>
+  </div>
+</div>

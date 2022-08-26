@@ -1,0 +1,20 @@
+<div>
+  <h1>MOVIE</h1>
+</div>
+<div class="container" *ngIf="movie">
+  <div class="card" style="width: 60rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{movie.title}}</h5>
+      <p class="card-text">{{movie.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Actors: {{movie.actors}}</li>
+      <li class="list-group-item">Directors: {{movie.directors}}</li>
+<!--      <li class="list-group-item">Expired Time: {{movie.expiredTime}}</li>-->
+      <li class="list-group-item">Link play: <a class="card-link">{{movie.linkPlay.url}}</a></li>
+    </ul>
+    <div class="card-body">
+      <a routerLink="/home" class="card-link">Back</a>
+    </div>
+  </div>
+</div>

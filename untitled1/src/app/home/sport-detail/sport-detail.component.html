@@ -1,0 +1,18 @@
+<div>
+  <h1>SPORT</h1>
+</div>
+<div class="container" *ngIf="sport">
+  <div class="card" style="width: 60rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{sport.title}}</h5>
+      <p class="card-text">{{sport.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Players: {{sport.player}}</li>
+      <li class="list-group-item">Link play: <a class="card-link">{{sport.linkPlay.url}}</a></li>
+    </ul>
+    <div class="card-body">
+      <a routerLink="/home" class="card-link">Back</a>
+    </div>
+  </div>
+</div>
